@@ -1,7 +1,7 @@
 "use client"
 import React, { ReactNode } from 'react';
 import theme from '../../theme'; // 确保路径正确
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from '@mui/material/styles';
 
 type LayoutProps = {
   children: ReactNode;
