@@ -1,9 +1,10 @@
 'use client'
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation'; // 注意：这里是 'next/router'，不是 'next/navigation'
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import Box from '@material-ui/core/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+
 
 const PokemonSearch = () => {
   const [inputId, setInputId] = useState('');

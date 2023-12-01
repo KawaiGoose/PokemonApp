@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import React from 'react';
 import axios from 'axios';
+import Button from '@mui/material/Button';
 
 export default function Home() {
   const handleSubscription = async (e) => {
@@ -40,7 +41,7 @@ export default function Home() {
             />
             <h3>Very expensive art piece 1</h3>
             {/* 确保你已经定义了checkout函数或者你已经导入了checkout */}
-            <button onClick={handleSubscription}>BUY!</button>
+            <Button variant="contained" color="primary" onClick={handleSubscription}>BUY!</Button>
           </div>
           <div>
             <Image
