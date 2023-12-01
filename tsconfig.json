@@ -20,14 +20,17 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "target": "es5",
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "src/app/article.js"  ],
+    "**/*.tsx",
+    "src/app/article.js"
+  ],
   "exclude": [
     "node_modules"
   ]
