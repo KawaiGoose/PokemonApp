@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import { useRouter } from 'next/navigation'; // 注意：这里是 'next/router'，不是 'next/navigation'
+import { useRouter } from 'next/router'; // 注意：这里是 'next/router'，不是 'next/navigation'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
