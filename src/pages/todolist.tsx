@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useMemo } from 'react';
-import { Button, TextField, Grid, Paper, IconButton } from '@material-ui/core';
-import DeleteIcon from '@material-ui/icons/Delete';
-import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
-import EmojiEmotionsIcon from '@material-ui/icons/EmojiEmotions';
-import { useTheme } from '@material-ui/core/styles';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import { useTheme } from '@mui/material/styles';
 
 // 定义任务类型
 interface Task {
@@ -61,7 +61,8 @@ export default function App() {
   return (
 
       <div style={{ padding: theme.spacing(3)}}>
-        <Grid container spacing={3} direction="column" alignItems="center" justify="center">
+        <Grid container spacing={3} direction="column" alignItems="center" justifyContent="center">
+  {/* 其他组件 */}
           <Grid item>
             <h1 style={{ color: theme.palette.primary.main }}>互动事件列表</h1>
           </Grid>

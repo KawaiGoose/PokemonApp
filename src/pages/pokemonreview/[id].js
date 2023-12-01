@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/router';
 
 const PokemonViewer = () => {
-  const searchParams = useSearchParams();
-  const id = searchParams.get('id');
+  const router = useRouter();
+  const {id} = router.query; // 获取查询参数
   const [pokemon, setPokemon] = useState(null);
 
   const loadDataFromServer = async () => {

@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 export default function Home() {
   const handleSubscription = async (e) => {
     e.preventDefault();
-    const { data } = await axios.post('../api/payment',
+    const { data } = await axios.post('/api/route',
     {
       priceId: "price_1OHWdTKwZOLBQ6VV36IQAx6L"
     },

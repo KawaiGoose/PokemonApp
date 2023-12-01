@@ -11,7 +11,7 @@ const PokemonSearch = () => {
   const router = useRouter();
 
   const handleSearch = () => {
-    router.push(`pokemonsearch/client?id=${inputId}`);
+    router.push(`/pokemonview/${inputId}`);
   };
 
   return (
@@ -24,7 +24,7 @@ const PokemonSearch = () => {
         variant="outlined"
         margin="normal"
       />
-      <Button variant="contained" color="primary" onClick={handleSearch}>
+      <Button variant="contained" color="primary" onClick={() => router.push(`/pokemonview/${inputId}`)}>
         Search
       </Button>
     </Box>
