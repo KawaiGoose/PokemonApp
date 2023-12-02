@@ -10,10 +10,6 @@ const PokemonSearch = () => {
   const [inputId, setInputId] = useState('');
   const router = useRouter();
 
-  const handleSearch = () => {
-    router.push(`/pokemonview/${inputId}`);
-  };
-
   return (
     <Box display="flex" alignItems="center" justifyContent="center">
       <TextField 

@@ -1,26 +1,39 @@
 'use client';
 import Head from "next/head";
 import Image from "next/image";
-import React from 'react';
-import axios from 'axios';
 import Button from '@mui/material/Button';
+import React, { useState } from 'react';
 
 export default function Home() {
+
   const handleSubscription = async (e) => {
-    e.preventDefault();
-    const { data } = await axios.post('/api/route',
-    {
-      priceId: "price_1OHWdTKwZOLBQ6VV36IQAx6L"
-    },
-    {
-      headers: {
-        "Content-Type": "application/json",
-      },
+    try {
+      const res = await fetch('/api/route', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ priceId: "price_1OHWdTKwZOLBQ6VV36IQAx6L" })
+      });
+
+      if (!res.ok) {
+        throw new Error(`Error: ${res.status}`);
+      }
+
+      const data = await res.json();
+
+      if (data.url) {
+        // 使用 JavaScript 的 window.location.assign 进行跳转
+        window.location.assign(data.url);
+      } else {
+        console.error('No URL returned from the API');
+      }
+    } catch (error) {
+      console.error('Failed to call API:', error);
     }
-    );
-    window.location.assign(data)
-  }
-  
+  };
+
+
   return (
     <div>
       <Head>
