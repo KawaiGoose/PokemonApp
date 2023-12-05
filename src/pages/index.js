@@ -53,7 +53,7 @@ export default function Home() {
               height={150}
             />
             <h3>Very expensive art piece 1</h3>
-            <Button variant="contained" color="primary" onClick={handleSubscription}>BUY!</Button>
+            <Button id="al" aria-label="Name" variant="contained" color="primary" onClick={handleSubscription}>BUY!</Button>
           </div>
           <div>
             <Image
