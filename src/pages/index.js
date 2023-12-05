@@ -2,7 +2,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Button from '@mui/material/Button';
-import React, { useState } from 'react';
+import React from 'react';
 
 export default function Home() {
 
@@ -53,7 +53,6 @@ export default function Home() {
               height={150}
             />
             <h3>Very expensive art piece 1</h3>
-            {/* 确保你已经定义了checkout函数或者你已经导入了checkout */}
             <Button variant="contained" color="primary" onClick={handleSubscription}>BUY!</Button>
           </div>
           <div>
@@ -64,10 +63,9 @@ export default function Home() {
               height={150}
             />
             <h3>Very expensive art piece 2</h3>
-            {/* 你可能还想添加购买第二件艺术品的功能 */}
           </div>
         </div>
       </main>
-    </div>
+      </div>
   )
 }

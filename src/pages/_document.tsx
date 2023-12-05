@@ -1,26 +1,18 @@
-// _document.js
-import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import theme from '../theme'; // 确保路径正确
+import React from "react";
+import Document, { Html, Head, Main, NextScript } from "next/document";
+import theme from "../theme";
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
-    const originalRenderPage = ctx.renderPage;
-
-
-    const initialProps = await Document.getInitialProps(ctx);
-
-
-    return {
-      ...initialProps,
-    };
-  }
-
   render() {
     return (
       <Html lang="en">
         <Head>
-          {/* Inject emotion styles */}
+          {/* PWA primary color */}
+          <meta name="theme-color" content={theme.palette.primary.main} />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+          />
         </Head>
         <body>
           <Main />
@@ -30,3 +22,4 @@ export default class MyDocument extends Document {
     );
   }
 }
+
